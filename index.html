@@ -2,8 +2,8 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <title>SS AgriQulture</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>SS Agriqulture</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -25,19 +25,7 @@
     <link rel="stylesheet" href="assets/css/default.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="stylesheet" href="styless.css">
     
-    <style>
-      .cont{
-        background-image: url('assets/img/others/benefits.png');
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 165vh;
-        width: 200vh;
-      }
-    </style>
-    <!--this the css for microgreens benefits -->
   </head>
   <body>
     <!-- Pre-loader-start -->
@@ -54,6 +42,7 @@
         <div class="tg-cube tg-cube9"></div>
       </div>
     </div>
+
     <!-- Pre-loader-end -->
 
     <!-- Scroll-top -->
@@ -125,9 +114,9 @@
                       <li class="header-shop-cart">
                         <a href="#" class="cart-count"
                           ><i class="flaticon-shopping-cart"></i>
-                          <span class="mini-cart-count">2</span>
+                          <span class="mini-cart-count">0</span>
                         </a>
-                        <div class="header-mini-cart">
+                        <!-- <div class="header-mini-cart">
                           <ul
                             class="woocommerce-mini-cart cart_list product_list_widget list-wrap"
                           >
@@ -201,7 +190,7 @@
                             >
                           </p>
                         </div>
-                      </li>
+                      </li> -->
                       <li class="header-search">
                         <a href="#"><i class="flaticon-search"></i></a>
                       </li>
@@ -299,10 +288,10 @@
             </p>
           </div>
           <div class="offcanvas-contact">
-            <h4 class="number">+918076406706</h4>
-            <h4 class="email">info.agriqulture@gmail.com</h4>
+            <h4 class="number">+9180000000</h4>
+            <h4 class="email">SSAGRIQULTURE@GMAIL.com</h4>
             <p>
-              Thane, <br />
+              Mumbai, <br />
               Mumbai, India.
             </p>
             <ul class="offcanvas-social list-wrap">
@@ -322,6 +311,7 @@
       <div class="offCanvas-overlay"></div>
       <!-- offCanvas-end -->
     </header>
+
     <!-- header-area-end -->
 
     <!-- main-area -->
@@ -332,9 +322,9 @@
           <div class="row justify-content-center">
             <div class="col-xxl-8 col-xl-7 col-lg-8 col-md-10">
               <div class="banner-content text-center">
-                <p class="banner-caption">.. Increased Energy With MICROGREENS ..</p>
-                <h2 class="title">Mix Protein Provided Way To Growth</h2>
-                <a href="shop.html" class="btn btn-two">Shop Now</a>
+                <p class="banner-caption">.. SuperGreens For SuperBharat ™  ..</p>
+                <h2 class="title">ORGANIC SUPPLEMENTS-GROWN BY YOU, FOR YOU</h2>
+                <a href="shop.html" class="btn btn-two">Harvest Now</a>
               </div>
             </div>
           </div>
@@ -393,6 +383,93 @@
           />
         </div>
       </section>
+      <div class="custom-popup" id="custom-popup"
+       style="position: fixed;
+       top: 70%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       background-color: white;
+       padding: 20px;
+       border-radius: 8px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+       max-width: 100%;">
+      <span class="custom-close-btn" onclick="closeCustomPopup()" style="
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 24px;
+          cursor: pointer;">&times;</span>
+      <div class="popup-content" style="
+      display: flex;
+      flex-wrap: wrap;">
+          <div class="popup-image" style="
+          flex: 1;
+          max-width: 100%;">
+              <img src="assets/img/others/newsletter.png" alt="Custom Newsletter Image">
+          </div>
+          <div class="popup-details" style="
+          flex: 2;
+          padding: 0 20px;">
+              <center><h2>Subscribe to Our Newsletter</h2></center>
+              <input type="email" placeholder="Enter your email address" id="custom-email" required style="
+                  width: 100%;
+                  padding: 10px;
+                  margin-bottom: 10px;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;">
+                  <center>
+              <button class="custom-button" onclick="subscribeCustom()" style="
+                  background-color: #4caf50;
+                  color: white;
+                  padding: 10px 20px;
+                  border: none;
+                  border-radius: 4px;
+                  cursor: pointer;">Subscribe</button>
+                </center>
+          </div>
+      </div>
+  </div>
+  <script>
+    function closeCustomPopup() {
+        document.getElementById('custom-popup').style.display = 'none';
+    }
+
+    function subscribeCustom() {
+        var emailInput = document.getElementById('custom-email');
+        var email = emailInput.value;
+
+        // Validate email address (you can add more validation if needed)
+        if (email) {
+            // For demonstration purposes, assume subscription is successful
+            // You can replace this with your actual subscription logic
+            var subscriptionSuccess = true;
+
+            if (subscriptionSuccess) {
+                // Create a Bootstrap success alert dynamically
+                var alertDiv = document.createElement('div');
+                alertDiv.className = 'alert alert-success alert-dismissible fade show';
+                alertDiv.role = 'alert';
+                alertDiv.innerHTML = 'Subscription successful! Thank you for subscribing to our newsletter.';
+                // Add close button to the alert
+                alertDiv.innerHTML += '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+
+                // Append the alert to the popup
+                var popup = document.getElementById('custom-popup');
+                popup.appendChild(alertDiv);
+
+                // Close the popup after subscribing (you can customize this behavior)
+                setTimeout(function () {
+                    closeCustomPopup();
+                }, 2000); // Automatically close the popup after 5 seconds
+            } else {
+                console.log('Subscription failed. Please try again later.');
+            }
+        } else {
+            console.log('Invalid email address');
+        }
+    }
+</script>
+
       <!-- banner-area-end -->
 
       <!-- brand-area -->
@@ -401,7 +478,7 @@
           <div class="row">
             <div class="col-12">
               <div class="brand-title text-center mb-50">
-                <p class="title">Perfect Brand is Featured on</p>
+                <p class="title">Organic and Fresh Support from</p>
               </div>
             </div>
           </div>
@@ -464,10 +541,9 @@
                         <i class="flaticon-tape-measure"></i>
                       </div>
                       <div class="features-content">
-                        <h4 class="title">Multi Fruits Flavour</h4>
+                        <h4 class="title">Tiny But Mighty</h4>
                         <p>
-                          A thing added to something else in order to complete
-                          or enhance it.
+                          
                         </p>
                       </div>
                     </div>
@@ -478,10 +554,9 @@
                         <i class="flaticon-test"></i>
                       </div>
                       <div class="features-content">
-                        <h4 class="title">Flower Formula</h4>
+                        <h4 class="title">Fast Growth</h4>
                         <p>
-                          A thing added to something else in order to complete
-                          or enhance it.
+                          
                         </p>
                       </div>
                     </div>
@@ -492,10 +567,9 @@
                         <i class="flaticon-weight"></i>
                       </div>
                       <div class="features-content">
-                        <h4 class="title">Fishbone Diagram</h4>
+                        <h4 class="title">Hassle-Free & Effortless</h4>
                         <p>
-                          A thing added to something else in order to complete
-                          or enhance it.
+                          
                         </p>
                       </div>
                     </div>
@@ -506,10 +580,9 @@
                         <i class="flaticon-abs"></i>
                       </div>
                       <div class="features-content">
-                        <h4 class="title">100% Fat Blasting</h4>
+                        <h4 class="title">Beyond Organic</h4>
                         <p>
-                          A thing added to something else in order to complete
-                          or enhance it.
+                         
                         </p>
                       </div>
                     </div>
@@ -520,69 +593,60 @@
           </div>
         </div>
       </section>
-      <!-- features-area-end -->
-            <!-- fact-area -->
-            <section class="fact-area">
-              <div class="container">
-                <div class="fact-items-wrapper">
-                  <div class="row g-0 justify-content-center">
-                    <div class="col-lg-4 col-md-6 col-sm-9">
-                      <div class="fact-item">
-                        <div class="chart" data-percent="65">
-                          <span class="percentage">65<small>%</small></span>
-                        </div>
-                        <div class="fact-content">
-                          <h4 class="title">Active Members</h4>
-                          <span>Yes we did it asap software</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-9">
-                      <div class="fact-item">
-                        <div class="chart" data-percent="90">
-                          <span class="percentage">90<small>%</small></span>
-                        </div>
-                        <div class="fact-content">
-                          <h4 class="title">Projects Done</h4>
-                          <span>Yes we did it asap software</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-9">
-                      <div class="fact-item">
-                        <div class="chart" data-percent="80">
-                          <span class="percentage">80<small>%</small></span>
-                        </div>
-                        <div class="fact-content">
-                          <h4 class="title">Get Rewards</h4>
-                          <span>Yes we did it asap software</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- fact-area-end -->
-             
-
-
-            
-            <section class="cont">
-              <!-- No <img> tag here -->
-            </section>
-            
-
-            <section class="container">
-              <img src="assets/img/bg/greenwave_resized.png" alt="Background Image" class="background-image"> 
-              <div class="image-container">
-                  <img src="assets/img/bg/Frame Left_resized.png" alt="Overlay Image" class="overlay-image">
-              </div>
-          </section>
-
-
-
-
+<section class="fact-area">
+  <div class="container">
+    <div class="fact-items-wrapper">
+      <div class="row g-0 justify-content-center">
+        <div class="col-lg-4 col-md-6 col-sm-9">
+          <div class="fact-item">
+            <div class="chart" data-percent="65">
+              
+              <span class="percentage">65<small>%</small></span>
+            </div>
+            <div class="fact-content">
+              <h4 class="title">Active Members</h4>
+              <span>Yes we did it asap software</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-9">
+          <div class="fact-item">
+            <div class="chart" data-percent="90">
+              <span class="percentage">90<small>%</small></span>
+            </div>
+            <div class="fact-content">
+              <h4 class="title">Projects Done</h4>
+              <span>Yes we did it asap software</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-9">
+          <div class="fact-item">
+            <div class="chart" data-percent="80">
+              <span class="percentage">80<small>%</small></span>
+            </div>
+            <div class="fact-content">
+              <h4 class="title">Get Rewards</h4>
+              <span>Yes we did it asap software</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      
+      
+      <style>
+       
+        .newste{
+          width: 70%;
+           height: auto;
+        }
+        
+      </style>
+      <center>
+    <img src="assets/img/others/featuree.png" class="newste" width="1440" height="1224"></center>
             <!-- Ingredients-area -->
             <section id="ingredient" class="ingredients-area">
               <div class="container">
@@ -1763,5 +1827,7 @@ Exceptional customer experiences while contributing positively to the global eco
     <script src="assets/js/ajax-form.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/newfe.js"></script>
+
   </body>
 </html>
