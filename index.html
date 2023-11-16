@@ -42,9 +42,7 @@
         <div class="tg-cube tg-cube9"></div>
       </div>
     </div>
-
     <!-- Pre-loader-end -->
-
     <!-- Scroll-top -->
     <button class="scroll-top scroll-to-target" data-target="html">
       <i class="fas fa-angle-up"></i>
@@ -191,18 +189,6 @@
                           </p>
                         </div>
                       </li> -->
-                      <li class="header-search">
-                        <a href="#"><i class="flaticon-search"></i></a>
-                      </li>
-                      <li class="offCanvas-btn d-none d-xl-block">
-                        <a href="#" class="navSidebar-button"
-                          ><i class="flaticon-layout"></i
-                        ></a>
-                      </li>
-                    </ul>
-                  </div>
-                </nav>
-              </div>
               <!-- Mobile Menu  -->
               <div class="mobile-menu">
                 <nav class="menu-box">
@@ -322,8 +308,8 @@
           <div class="row justify-content-center">
             <div class="col-xxl-8 col-xl-7 col-lg-8 col-md-10">
               <div class="banner-content text-center">
-                <p class="banner-caption">.. SuperGreens For SuperBharat ™  ..</p>
                 <h2 class="title">ORGANIC SUPPLEMENTS-GROWN BY YOU, FOR YOU</h2>
+                <p class="banner-caption" style="font-size: 30px;">.. SuperGreens For SuperBharat ™ ..</p>
                 <a href="shop.html" class="btn btn-two">Harvest Now</a>
               </div>
             </div>
@@ -384,94 +370,115 @@
         </div>
       </section>
       <div class="custom-popup" id="custom-popup"
-       style="position: fixed;
-       top: 70%;
-       left: 50%;
-       transform: translate(-50%, -50%);
-       background-color: white;
-       padding: 20px;
-       border-radius: 8px;
-       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-       max-width: 100%;">
-      <span class="custom-close-btn" onclick="closeCustomPopup()" style="
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          font-size: 24px;
-          cursor: pointer;">&times;</span>
-      <div class="popup-content" style="
-      display: flex;
-      flex-wrap: wrap;">
-          <div class="popup-image" style="
-          flex: 1;
-          max-width: 100%;">
-              <img src="assets/img/others/newsletter.png" alt="Custom Newsletter Image">
-          </div>
-          <div class="popup-details" style="
-          flex: 2;
-          padding: 0 20px;">
-              <center><h2>Subscribe to Our Newsletter</h2></center>
-              <input type="email" placeholder="Enter your email address" id="custom-email" required style="
-                  width: 100%;
-                  padding: 10px;
-                  margin-bottom: 10px;
-                  border: 1px solid #ccc;
-                  border-radius: 4px;">
-                  <center>
-              <button class="custom-button" onclick="subscribeCustom()" style="
-                  background-color: #4caf50;
-                  color: white;
-                  padding: 10px 20px;
-                  border: none;
-                  border-radius: 4px;
-                  cursor: pointer;">Subscribe</button>
-                </center>
-          </div>
-      </div>
-  </div>
+      style="position: fixed;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      max-width: 100%;
+      z-index: 9999; /* Set a high z-index value to ensure it appears on top. Adjust as needed. */
+      opacity: 0; /* Initially set opacity to 0 */
+      transition: opacity 0.5s ease-in-out; /* Add a transition for opacity */
+      display: none;"> <!-- Initially set display to none -->
+     <span class="custom-close-btn" onclick="closeCustomPopup()" style="
+         position: absolute;
+         top: 10px;
+         right: 10px;
+         font-size: 24px;
+         cursor: pointer;">&times;</span>
+     <div class="popup-content" style="
+         display: flex;
+         flex-wrap: wrap;">
+         <div class="popup-image" style="
+             flex: 1;
+             max-width: 100%;">
+             <img src="assets/img/others/newsletter.png" alt="Custom Newsletter Image">
+         </div>
+         <div class="popup-details" style="
+             flex: 2;
+             padding: 0 20px;">
+             <center><h2>Subscribe to Our Newsletter</h2></center>
+             <input type="email" placeholder="Enter your email address" id="custom-email" required style="
+                 width: 100%;
+                 padding: 10px;
+                 margin-bottom: 10px;
+                 border: 1px solid #ccc;
+                 border-radius: 4px;">
+                 <center>
+             <button class="custom-button" onclick="subscribeCustom()" style="
+                 background-color: #4caf50;
+                 color: white;
+                 padding: 10px 20px;
+                 border: none;
+                 border-radius: 4px;
+                 cursor: pointer;">Subscribe</button>
+               </center>
+         </div>
+     </div>
+ </div>
+ 
   <script>
     function closeCustomPopup() {
-        document.getElementById('custom-popup').style.display = 'none';
-    }
+      var popup = document.getElementById('custom-popup');
+      popup.style.opacity = '0';
+      setTimeout(function () {
+          popup.style.display = 'none';
+      }, 500); // Set the display to none after the animation duration (500 milliseconds)
+  }
 
-    function subscribeCustom() {
-        var emailInput = document.getElementById('custom-email');
-        var email = emailInput.value;
+  function subscribeCustom() {
+      var emailInput = document.getElementById('custom-email');
+      var email = emailInput.value;
 
-        // Validate email address (you can add more validation if needed)
-        if (email) {
-            // For demonstration purposes, assume subscription is successful
-            // You can replace this with your actual subscription logic
-            var subscriptionSuccess = true;
+      // Validate email address (you can add more validation if needed)
+      if (email) {
+          // For demonstration purposes, assume subscription is successful
+          // You can replace this with your actual subscription logic
+          var subscriptionSuccess = true;
 
-            if (subscriptionSuccess) {
-                // Create a Bootstrap success alert dynamically
-                var alertDiv = document.createElement('div');
-                alertDiv.className = 'alert alert-success alert-dismissible fade show';
-                alertDiv.role = 'alert';
-                alertDiv.innerHTML = 'Subscription successful! Thank you for subscribing to our newsletter.';
-                // Add close button to the alert
-                alertDiv.innerHTML += '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+          if (subscriptionSuccess) {
+              // Create a Bootstrap success alert dynamically
+              var alertDiv = document.createElement('div');
+              alertDiv.className = 'alert alert-success alert-dismissible fade show';
+              alertDiv.role = 'alert';
+              alertDiv.innerHTML = 'Subscription successful! Thank you for subscribing to our newsletter.';
+              // Add close button to the alert
+              alertDiv.innerHTML += '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
 
-                // Append the alert to the popup
-                var popup = document.getElementById('custom-popup');
-                popup.appendChild(alertDiv);
+              // Append the alert to the popup
+              var popup = document.getElementById('custom-popup');
+              popup.appendChild(alertDiv);
 
-                // Close the popup after subscribing (you can customize this behavior)
-                setTimeout(function () {
-                    closeCustomPopup();
-                }, 2000); // Automatically close the popup after 5 seconds
-            } else {
-                console.log('Subscription failed. Please try again later.');
-            }
-        } else {
-            console.log('Invalid email address');
-        }
-    }
+              // Close the popup after subscribing (you can customize this behavior)
+              setTimeout(function () {
+                  closeCustomPopup();
+              }, 2000); // Automatically close the popup after 5 seconds
+          } else {
+              console.log('Subscription failed. Please try again later.');
+          }
+      } else {
+          console.log('Invalid email address');
+      }
+  }
+
+  // Function to show the popup with animation
+  function showPopupWithAnimation() {
+      var popup = document.getElementById('custom-popup');
+      popup.style.display = 'block'; // Set display to block
+      setTimeout(function () {
+          popup.style.opacity = '1'; // Set opacity to 1 to trigger the fade-in animation
+      }, 100); // Set the delay before the animation starts (100 milliseconds)
+  }
+
+  // Call the showPopupWithAnimation function after 10 seconds (10000 milliseconds)
+  setTimeout(function () {
+      showPopupWithAnimation();
+  }, 10000);
 </script>
-
       <!-- banner-area-end -->
-
       <!-- brand-area -->
       <div class="brand-area">
         <div class="container">
@@ -511,9 +518,52 @@
                 /></a>
               </div>
             </div>
+            <div class="col-2">
+              <div class="brand-item">
+                <a href="#"
+                  ><img src="assets/img/brand/brand_05.png" alt="brand"
+                /></a>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="brand-item">
+                <a href="#"
+                  ><img src="assets/img/brand/brand_05.png" alt="brand"
+                /></a>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="brand-item">
+                <a href="#"
+                  ><img src="assets/img/brand/brand_05.png" alt="brand"
+                /></a>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="brand-item">
+                <a href="#"
+                  ><img src="assets/img/brand/brand_05.png" alt="brand"
+                /></a>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="brand-item">
+                <a href="#"
+                  ><img src="assets/img/brand/brand_05.png" alt="brand"
+                /></a>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="brand-item">
+                <a href="#"
+                  ><img src="assets/img/brand/brand_05.png" alt="brand"
+                /></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    
       <!-- brand-area-end -->
 
       <!-- features-area -->
@@ -593,50 +643,6 @@
           </div>
         </div>
       </section>
-<section class="fact-area">
-  <div class="container">
-    <div class="fact-items-wrapper">
-      <div class="row g-0 justify-content-center">
-        <div class="col-lg-4 col-md-6 col-sm-9">
-          <div class="fact-item">
-            <div class="chart" data-percent="65">
-              
-              <span class="percentage">65<small>%</small></span>
-            </div>
-            <div class="fact-content">
-              <h4 class="title">Active Members</h4>
-              <span>Yes we did it asap software</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-9">
-          <div class="fact-item">
-            <div class="chart" data-percent="90">
-              <span class="percentage">90<small>%</small></span>
-            </div>
-            <div class="fact-content">
-              <h4 class="title">Projects Done</h4>
-              <span>Yes we did it asap software</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-9">
-          <div class="fact-item">
-            <div class="chart" data-percent="80">
-              <span class="percentage">80<small>%</small></span>
-            </div>
-            <div class="fact-content">
-              <h4 class="title">Get Rewards</h4>
-              <span>Yes we did it asap software</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-      
-      
       <style>
        
         .newste{
