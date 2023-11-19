@@ -1,11 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Merriweather);
-*, 
-*:before, 
+/* CSS styles */
+*,
+*:before,
 *:after {
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     background: #f1f1f1;
     font-family: 'Merriweather', sans-serif;
     padding: 1em;
@@ -23,7 +24,8 @@ form {
     margin: 20px auto;
 }
 
-input, textarea {
+input,
+textarea {
     border: 0;
     outline: 0;
     padding: 1em;
@@ -49,11 +51,11 @@ input[type="submit"] {
     font-family: 'Merriweather', sans-serif;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
+}
 
-    &:hover {
-        background-color: #27ae60; /* Darker green on hover */
-        box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
-    }
+input[type="submit"]:hover {
+    background-color: #27ae60; /* Darker green on hover */
+    box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
 }
 
 textarea {
@@ -92,3 +94,37 @@ textarea {
 .cf:after {
     clear: both;
 }
+
+.footer-contact-wrap {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .footer-contact-wrap p,
+  .footer-contact-wrap ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+  }
+  
+  .list-wrap {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    text-align: center;
+  }
+  
+  .list-wrap li {
+    display: inline-block;
+    margin-right: 20px;
+    color: #555; /* Adjust the color as needed */
+  }
+  
+  .list-wrap li:last-child {
+    margin-right: 0;
+  }
+  
+  .list-wrap li i {
+    margin-right: 5px;
+  }
