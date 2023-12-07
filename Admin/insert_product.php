@@ -20,9 +20,11 @@ if(isset($_POST['insert_product'])){
     $temp_image3 = $_FILES['product_image3']['tmp_name'];
 
     // Checking empty condition
-    if ($product_title == '' || $description == '' || $product_keywords == '' || $product_category == '' || $product_price == '' || $product_image1 == '' || $product_image2 == '' || $product_image3 == ''){
+    if ($product_title == '' || $description == '' || $product_keywords == '' || $product_category == '' || $product_price == '' || $product_image1 == '' || $product_image2 == '' || $product_image3 == '')
+    {
         echo "<script>alert('Please fill all the available fields')</script>";
-    } else {
+    } 
+    else {
         move_uploaded_file($temp_image1, "./product_images/$product_image1");
         move_uploaded_file($temp_image2, "./product_images/$product_image2");
         move_uploaded_file($temp_image3, "./product_images/$product_image3");

@@ -2,7 +2,8 @@
 /* ... */
 
 /* General styles */
-body {
+body 
+  {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
     margin: 0;
@@ -20,8 +21,8 @@ body {
 /* Other styles ... */
 
 .shopping-cart {
-    max-width: 2000px; /* Updated max-width to accommodate larger screens */
-    width: 95%;
+    max-width: 1400px; /* Updated max-width to accommodate larger screens */
+    width: 80%;
     margin: 0 auto;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -33,9 +34,9 @@ body {
   /* Column headers, product entries, totals, checkout, etc. styles... */
   
   /* Adjusted media query for larger screens */
-  @media screen and (min-width: 2000px) {
+  @media screen and (min-width: 1400px) {
     .shopping-cart {
-      width: 1600px; /* Set a fixed width for very large screens */
+      width: 1800px; /* Set a fixed width for very large screens */
     }
   }
   
@@ -62,11 +63,11 @@ body {
     grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
     align-items: center;
     border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+    padding: 8px 0;
   }
   
   .product-image img {
-    width: 100px;
+    width: 80px;
     height: auto;
   }
   
