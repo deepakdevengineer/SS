@@ -86,7 +86,8 @@ body
     text-align: center;
   }
   
-  .product-removal button {
+  .product-removal button 
+  {
     padding: 5px 10px;
     background-color: #c66;
     color: #fff;
@@ -94,32 +95,38 @@ body
     border-radius: 3px;
   }
   
-  .product-removal button:hover {
+  .product-removal button:hover
+  {
     background-color: #a44;
   }
   
   /* Totals section */
-  .totals {
+  .totals 
+  {
     margin-top: 20px;
   }
   
-  .totals-item {
+  .totals-item 
+  {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
   }
   
-  .totals-item label {
+  .totals-item label 
+  {
     margin-right: 10px;
     flex: 1;
   }
   
-  .totals-value {
+  .totals-value 
+  {
     font-weight: bold;
   }
   
-  .checkout {
+  .checkout 
+  {
     float: right;
     margin-top: 20px;
     padding: 10px 20px;
@@ -130,11 +137,13 @@ body
     font-size: 16px;
   }
   
-  .checkout:hover {
+  .checkout:hover 
+  {
     background-color: #494;
   }
   
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 900px) 
+  {
     .shopping-cart {
       width: 95%;
     }
