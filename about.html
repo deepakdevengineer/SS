@@ -8,16 +8,6 @@
     <style>
         /* Add your CSS styles here */
         /* ... */
-        .social-media-links {
-    display: none;
-  }
-
-  /* Show social media links when the 'show-links' class is present */
-  .show-links .social-media-links {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
     </style>
 </head>
 <body>
@@ -132,20 +122,20 @@
     </div>
   </div>
   <script>
-    // Wait for the DOM content to load
-    document.addEventListener('DOMContentLoaded', function() {
-      // Get all elements with class 'team-card'
-      const teamCards = document.querySelectorAll('.team-card');
-  
-      // Iterate through each team card element
-      teamCards.forEach(card => {
-        // Add a click event listener to each card
-        card.addEventListener('click', function() {
-          // Toggle the class 'show-links' on the clicked card
-          card.classList.toggle('show-links');
-        });
+  // Wait for the DOM content to load
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get all elements with class 'team-card'
+    const teamCards = document.querySelectorAll('.team-card');
+
+    // Iterate through each team card element
+    teamCards.forEach(card => {
+      // Add a click event listener to each card
+      card.addEventListener('click', function() {
+        // Toggle the class 'show-links' on the clicked card
+        card.classList.toggle('show-links');
       });
     });
-  </script>
+  });
+</script>
 </body>
 </html>

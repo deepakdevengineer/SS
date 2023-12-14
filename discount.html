@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modal Example</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <style>
+    .modal-dialog {
+      height: 50%;
+      width: 50%;
+      margin: auto;
+    }
+
+    .text1 {
+      background-color: #dc3545;
+      color: white;
+      width: 20%;
+      margin-top: 5%;
+      text-align: center;
+    }
+
+    .icon2 {
+      color: #dc3545;
+    }
+
+    .modal-header {
+      color: white;
+      background-color: #dc3545;
+    }
+
+    .openmodal {
+      margin-left: 35%;
+      width: 25%;
+      margin-top: 25%;
+    }
+  </style>
+</head>
+<body>
+
+<!--Modal Launch Button-->
+<button type="button" class="btn btn-info btn-lg openmodal" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<!--Division for Modal-->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!--Modal Content-->
+    <div class="modal-content">
+      <!-- Modal Header-->
+      <div class="modal-header">
+        <h3>Discount offer: 10% off</h3>
+        <!--Close/Cross Button-->
+        <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
+      </div>
+      <!-- Modal Body-->
+      <div class="modal-body">
+        <div class="row">
+          <!--Gift Icon-->
+          <div class="col text-center">
+            <i class="fa fa-gift fa-4x icon2"></i>
+          </div>
+          <!--Modal Text-->
+          <div class="col-8">
+            <p>We care for our visitors and from time to time we provide small gifts to them. You are the lucky one today!</p>
+            <h6>Hurry! Copy the below code and use it at checkout within <u>a day</u></h6>
+            <h3 class="text1">v5l2</h3>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Footer-->
+      <div class="modal-footer">
+        <a href="#" class="btn btn-danger">Get it now <i class="fa fa-gem"></i></a>
+        <a href="#" class="btn btn-outline-danger" data-dismiss="modal">No, thanks</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
