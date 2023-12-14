@@ -25,7 +25,39 @@
     <link rel="stylesheet" href="assets/css/default.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+      /* Add any custom styles here */
+      .brand-item {
+        text-align: center;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease-in-out;
+      }
+      .brand-item img {
+        max-width: 100%;
+        height: auto;
+      }
+      .brand-item:hover {
+        transform: scale(1.1); /* Add a hover effect */
+      }
+      .slick-prev,
+      .slick-next {
+        font-size: 24px;
+        color: #000;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        cursor: pointer;
+      }
+      .slick-prev {
+        left: 10px;
+      }
+      .slick-next {
+        right: 10px;
+      }
+    </style>
   </head>
   <body>
     <!-- Pre-loader-start -->
@@ -49,6 +81,8 @@
     </button>
     <!-- Scroll-top-end-->
 
+    
+  
     <!-- header-area -->
     <header id="home">
       <div id="header-top-fixed"></div>
@@ -70,10 +104,7 @@
                     <ul class="navigation">
                       <li class="active menu-item-has-children">
                         <a href="#home" class="section-link">Home</a>
-                       <!-- <ul class="sub-menu"> 
-                         </li>
-                          <li><a href="index-2.html"></a></li>
-                        </ul> -->
+                       
                       </li> 
                       <li>
                         <a href="#features" class="section-link">Features</a>
@@ -89,21 +120,11 @@
                       
                       <li class="menu-item-has-children">
                         <a href="#news" class="section-link">Our Blog</a>
-                       <!-- <ul class="sub-menu">
-                          <li><a href="blog.html">Our Blog</a></li>
-                          <li><a href="blog-details.html">Blog Details</a></li>
-                        </ul> -->
+                      
                       </li>
                       <li>
                         <a href="#pricing" class="section-link">Pricing</a>
                       </li>
-                     <!-- <li class="menu-item-has-children">
-                        <a href="shop.html">Shop</a>
-                        <ul class="sub-menu">
-                          <li><a href="shop.html">Our Shop</a></li>
-                          <li><a href="shop-details.html">Shop Details</a></li>
-                        </ul>
-                      </li> -->
                      
                       <li><a href="contact.html">contacts</a></li>
                     </ul>
@@ -115,82 +136,7 @@
                           <i class="flaticon-shopping-cart"> </i>
                           <span class="mini-cart-count">0</span>
                         </a>
-                        <!-- <div class="header-mini-cart">
-                          <ul
-                            class="woocommerce-mini-cart cart_list product_list_widget list-wrap"
-                          >
-                            <li
-                              class="woocommerce-mini-cart-item d-flex align-items-center"
-                            >
-                              <a href="#" class="remove remove_from_cart_button"
-                                >×</a
-                              >
-                              <div class="mini-cart-img">
-                                <img
-                                  src="assets/img/products/cart_p01.jpg"
-                                  alt="Product"
-                                />
-                              </div>
-                              <div class="mini-cart-content">
-                                <h4 class="product-title">
-                                  <a href="shop-details.html"
-                                    >Antiaging and Longevity</a
-                                  >
-                                </h4>
-                                <div class="mini-cart-price">
-                                  1 ×
-                                  <span class="woocommerce-Price-amount amount"
-                                    >$49</span
-                                  >
-                                </div>
-                              </div>
-                            </li>
-                            <li
-                              class="woocommerce-mini-cart-item d-flex align-items-center"
-                            >
-                              <a href="#" class="remove remove_from_cart_button"
-                                >×</a
-                              >
-                              <div class="mini-cart-img">
-                                <img
-                                  src="assets/img/products/cart_p02.jpg"
-                                  alt="Product"
-                                />
-                              </div>
-                              <div class="mini-cart-content">
-                                <h4 class="product-title">
-                                  <a href="shop-details.html"
-                                    >Branched Chain Amino Acids</a
-                                  >
-                                </h4>
-                                <div class="mini-cart-price">
-                                  2 ×
-                                  <span class="woocommerce-Price-amount amount"
-                                    >$69</span
-                                  >
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
-                          <p class="woocommerce-mini-cart__total">
-                            <strong>Subtotal:</strong>
-                            <span class="woocommerce-Price-amount">$149</span>
-                          </p>
-                          <p class="checkout-link">
-                            <a
-                              href="shop-details.html"
-                              class="button wc-forward"
-                              >View cart</a
-                            >
-                            <a
-                              href="shop-details.html"
-                              class="button checkout wc-forward"
-                              >Checkout</a
-                            >
-                          </p>
-                        </div>
-                      </li> -->
-              <!-- Mobile Menu  -->
+                       
               <div class="mobile-menu">
                 <nav class="menu-box">
                   <div class="close-btn"><i class="fas fa-times"></i></div>
@@ -481,6 +427,9 @@
 </script>
       <!-- banner-area-end -->
       <!-- brand-area -->
+     
+
+
       <div class="brand-area">
         <div class="container">
           <div class="row">
@@ -491,80 +440,129 @@
             </div>
           </div>
           <div class="row brand-active">
+            <!-- Update image source paths and alt attributes accordingly -->
             <div class="col-2">
               <div class="brand-item">
-                <a href="#"
-                  ><img src="assets/img/brand/brand_02.png" alt="brand"
-                /></a>
+                <a href="#"><img src="assets/img/brand/brand_02.png" alt="brand"></a>
+              </div>
+            </div>
+            <!-- Add more brand items similarly -->
+            <div class="col-2">
+              <div class="brand-item">
+                <a href="#"><img src="assets/img/brand/brand_02.png" alt="brand"></a>
+              </div>
+            </div>
+            <!-- Add more brand items similarly -->
+            <div class="col-2">
+              <div class="brand-item">
+                <a href="#"><img src="assets/img/brand/brand_02.png" alt="brand"></a>
               </div>
             </div>
             <div class="col-2">
               <div class="brand-item">
-                <a href="#"
-                  ><img src="assets/img/brand/brand_03.png" alt="brand"
-                /></a>
+                <a href="#"><img src="assets/img/brand/brand_02.png" alt="brand"></a>
               </div>
             </div>
             <div class="col-2">
               <div class="brand-item">
-                <a href="#"
-                  ><img src="assets/img/brand/brand_04.png" alt="brand"
-                /></a>
+                <a href="#"><img src="assets/img/brand/brand_02.png" alt="brand"></a>
               </div>
             </div>
             <div class="col-2">
               <div class="brand-item">
-                <a href="#"
-                  ><img src="assets/img/brand/brand_05.png" alt="brand"
-                /></a>
+                <a href="#"><img src="assets/img/brand/brand_02.png" alt="brand"></a>
               </div>
             </div>
             <div class="col-2">
               <div class="brand-item">
-                <a href="#"
-                  ><img src="assets/img/brand/brand_05.png" alt="brand"
-                /></a>
+                <a href="#"><img src="assets/img/brand/brand_02.png" alt="brand"></a>
               </div>
             </div>
             <div class="col-2">
               <div class="brand-item">
-                <a href="#"
-                  ><img src="assets/img/brand/brand_05.png" alt="brand"
-                /></a>
+                <a href="#"><img src="assets/img/brand/brand_02.png" alt="brand"></a>
               </div>
             </div>
             <div class="col-2">
               <div class="brand-item">
-                <a href="#"
-                  ><img src="assets/img/brand/brand_05.png" alt="brand"
-                /></a>
+                <a href="#"><img src="assets/img/brand/brand_02.png" alt="brand"></a>
               </div>
             </div>
             <div class="col-2">
               <div class="brand-item">
-                <a href="#"
-                  ><img src="assets/img/brand/brand_05.png" alt="brand"
-                /></a>
+                <a href="#"><img src="assets/img/brand/brand_02.png" alt="brand"></a>
               </div>
             </div>
             <div class="col-2">
               <div class="brand-item">
-                <a href="#"
-                  ><img src="assets/img/brand/brand_05.png" alt="brand"
-                /></a>
+                <a href="#"><img src="assets/img/brand/brand_02.png" alt="brand"></a>
               </div>
             </div>
             <div class="col-2">
               <div class="brand-item">
-                <a href="#"
-                  ><img src="assets/img/brand/brand_05.png" alt="brand"
-                /></a>
+                <a href="#"><img src="assets/img/brand/brand_02.png" alt="brand"></a>
               </div>
             </div>
+            <div class="col-2">
+              <div class="brand-item">
+                <a href="#"><img src="assets/img/brand/brand_02.png" alt="brand"></a>
+              </div>
+            </div>
+            <!-- ... -->
           </div>
         </div>
+        <button class="slick-prev" aria-label="Previous">Previous</button>
+        <button class="slick-next" aria-label="Next">Next</button>
       </div>
     
+      <!-- Add Slick Carousel jQuery and initialization script -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          $('.brand-active').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000, // Adjust the speed as needed
+            dots: false,
+            arrows: true, // Enable navigation arrows
+            prevArrow: $('.slick-prev'), // Custom previous arrow
+            nextArrow: $('.slick-next'), // Custom next arrow
+            responsive: [
+              {
+                breakpoint: 992,
+                settings: {
+                  slidesToShow: 4
+                }
+              },
+              {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 3
+                }
+              },
+              {
+                breakpoint: 576,
+                settings: {
+                  slidesToShow: 2
+                }
+              }
+            ]
+          });
+    
+          // Preload images to improve loading time
+          $('.brand-item img').each(function() {
+            $('<img/>')[0].src = $(this).attr('src');
+          });
+        });
+      </script>
+
+
+
+
+
+
       <!-- brand-area-end -->
 
       <!-- features-area -->
@@ -644,6 +642,13 @@
           </div>
         </div>
       </section>
+
+
+
+
+
+
+
       <style>
         .newste{
           width: 100%;
@@ -654,6 +659,19 @@
     <img src="assets/img/others/featuree.png" class="newste" width="1600" height="1400" alt="img">
      </center>
             <!-- Ingredients-area -->
+
+
+
+
+
+
+
+
+
+
+
+
+
             <section id="ingredient" class="ingredients-area">
               <div class="container">
                 <div class="row align-items-center justify-content-center">
@@ -758,43 +776,52 @@
                 </div>
               </div>
             </section>
+
+
+
+
+
+
+
+
+
+
+
+
+            
             <!-- Ingredients-area-end -->
       
 <!-- We Need to insert the comparision -->
-            <section
-              class="formula-area formula-bg"
-              data-background="assets/img/bg/formula_bg.jpg"
-            >
-              <div class="container">
-                <div class="row align-items-center">
-                  <div class="col-lg-6 order-0 order-lg-2">
-                    <div class="formula-img">
-                      <img src="assets/img/others/formula_img.png" alt="img" />
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="formula-content">
-                      <div class="section-title white-title mb-50">
-                        <p class="sub-title">.. Accessible, High-Impact Nutrition ..</p>
-                        <h2 class="title">Why Choose AgriQulture? </h2>
+<section class="formula-area formula-bg" data-background="assets/img/bg/formula_bg.jpg">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 order-lg-2">
+        <div class="formula-img">
+          <img src="assets/img/others/formula_img.png" alt="img" />
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="formula-content">
+          <div class="section-title white-title mb-4">
+            <p class="sub-title">Accessible, High-Impact Nutrition</p>
+            <h2 class="title">Why Choose AgriQulture?</h2>
+          </div>
+          <ul class="formula-list list-wrap">
+            <li>We are changing the traditional culture of Agriculture XD.</li>
+            <li>Harvest Seconds Before Eating and Not Weeks.</li>
+            <li>Effortlessly Grow at The Comfort Of Your Home.</li>
+            <li>Soilless Technology Making Your Experience Messy-Free, Fungus-Free and Sustainable.</li>
+            <li>Gives You an Inspiration to Eat Healthy.</li>
+            <li>Microgreens make a sustainable choice, reducing food waste.</li>
+            <li>Elevate your culinary creations with the vibrant colors and textures of microgreens.</li>
+          </ul>
+          <a href="contact.html" class="btn btn-two mt-3">Know More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-                        
-                      </div>
-                      <ul class="formula-list list-wrap">
-                        <li>We are changing the traditional culture of Agriculture XD.</li>
-                        <li>Harvest Seconds Before Eating and Not Weeks.</li>
-                        <li>Effortlessly Grow at The Comfort Of Your Home.</li>
-                        <li>Soilless Technology Making Your Experience Messy-Free, Fungus-Free and Sustainable.</li>
-                        <li>Gives You an Inspiration to Eat Healthy.</li>
-                        <li>Microgreens make a sustainable choice, reducing food waste.</li>
-                        <li>Elevate your culinary creations with the vibrant colors and textures of microgreens.</li>
-                      </ul>
-                      <a href="contact.html" class="btn btn-two">Know More</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
 <!-- We Need to insert the comparision -->
       <!-- features-product -->
       <section id="paroller" class="features-products">
@@ -956,182 +983,6 @@
         <div class="fp-circle five"></div>
       </section>
       <!-- features-product-end -->
-
-      
-      <!-- shop-area -->
-      <!-- <section class="home-shop-area">
-        <div class="container">
-          <div class="row home-shop-active">
-            <div class="col-xl-3">
-              <div class="home-shop-item">
-                <div class="home-shop-thumb">
-                  <a href="shop-details.html">
-                    <img
-                      src="assets/img/products/home_shop_thumb01.png"
-                      alt="img"
-                    />
-                    <span class="discount"> -15%</span>
-                  </a>
-                  <div class="shop-thumb-shape"></div>
-                </div>
-                <div class="home-shop-content">
-                  <h4 class="title">
-                    <a href="shop-details.html">Comming Soon....</a>
-                  </h4>
-                  <span class="home-shop-price">$85.99</span>
-                  <div class="home-shop-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <span class="total-rating">(30)</span>
-                  </div>
-                  <div class="shop-content-bottom">
-                    <a href="#" class="cart"
-                      ><i class="flaticon-shopping-cart-1"></i
-                    ></a>
-                    <a href="#" class="btn btn-two">Buy Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3">
-              <div class="home-shop-item">
-                <div class="home-shop-thumb">
-                  <a href="shop-details.html">
-                    <img
-                      src="assets/img/products/home_shop_thumb02.png"
-                      alt="img"
-                    />
-                  </a>
-                  <div class="shop-thumb-shape yellow"></div>
-                </div>
-                <div class="home-shop-content">
-                  <h4 class="title">
-                    <a href="shop-details.html">Comming Soon....</a>
-                  </h4>
-                  <span class="home-shop-price">$55.99</span>
-                  <div class="home-shop-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <span class="total-rating">(30)</span>
-                  </div>
-                  <div class="shop-content-bottom">
-                    <a href="#" class="cart"
-                      ><i class="flaticon-shopping-cart-1"></i
-                    ></a>
-                    <a href="#" class="btn btn-two">Buy Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3">
-              <div class="home-shop-item">
-                <div class="home-shop-thumb">
-                  <a href="shop-details.html">
-                    <img
-                      src="assets/img/products/home_shop_thumb03.png"
-                      alt="img"
-                    />
-                    <span class="discount"> -15%</span>
-                  </a>
-                  <div class="shop-thumb-shape purple"></div>
-                </div>
-                <div class="home-shop-content">
-                  <h4 class="title">
-                    <a href="shop-details.html">Comming Soon....</a>
-                  </h4>
-                  <span class="home-shop-price">$79.99</span>
-                  <div class="home-shop-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <span class="total-rating">(24)</span>
-                  </div>
-                  <div class="shop-content-bottom">
-                    <a href="#" class="cart"
-                      ><i class="flaticon-shopping-cart-1"></i
-                    ></a>
-                    <a href="#" class="btn btn-two">Buy Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3">
-              <div class="home-shop-item">
-                <div class="home-shop-thumb">
-                  <a href="shop-details.html">
-                    <img
-                      src="assets/img/products/home_shop_thumb04.png"
-                      alt="img"
-                    />
-                  </a>
-                  <div class="shop-thumb-shape gray"></div>
-                </div>
-                <div class="home-shop-content">
-                  <h4 class="title">
-                    <a href="shop-details.html">Comming Soon...</a>
-                  </h4>
-                  <span class="home-shop-price">$79.99</span>
-                  <div class="home-shop-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <span class="total-rating">(24)</span>
-                  </div>
-                  <div class="shop-content-bottom">
-                    <a href="#" class="cart"
-                      ><i class="flaticon-shopping-cart-1"></i
-                    ></a>
-                    <a href="#" class="btn btn-two">Buy Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3">
-              <div class="home-shop-item">
-                <div class="home-shop-thumb">
-                  <a href="shop-details.html">
-                    <img
-                      src="assets/img/products/home_shop_thumb05.png"
-                      alt="img"
-                    />
-                  </a>
-                  <div class="shop-thumb-shape blue"></div>
-                </div>
-                <div class="home-shop-content">
-                  <h4 class="title">
-                    <a href="shop-details.html">Comming Soon...</a>
-                  </h4>
-                  <span class="home-shop-price">$39.99</span>
-                  <div class="home-shop-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <span class="total-rating">(12)</span>
-                  </div>
-                  <div class="shop-content-bottom">
-                    <a href="#" class="cart"
-                      ><i class="flaticon-shopping-cart-1"></i
-                    ></a>
-                    <a href="#" class="btn btn-two">Buy Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>-->
 
       <!-- blog-post-area -->
       <section id="news" class="blog-post-area">
