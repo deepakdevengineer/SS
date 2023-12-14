@@ -316,56 +316,49 @@
           />
         </div>
       </section>
-      <div class="custom-popup" id="custom-popup"
-      style="position: fixed;
+      <div class="custom-popup" id="custom-popup" style="position: fixed;
       top: 70%;
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: white;
-      padding: 20px;
+      padding: 0; /* Reset padding */
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       max-width: 100%;
-      z-index: 9999; /* Set a high z-index value to ensure it appears on top. Adjust as needed. */
-      opacity: 0; /* Initially set opacity to 0 */
-      transition: opacity 0.5s ease-in-out; /* Add a transition for opacity */
-      display: none;"> <!-- Initially set display to none -->
-     <span class="custom-close-btn" onclick="closeCustomPopup()" style="
-         position: absolute;
-         top: 10px;
-         right: 10px;
-         font-size: 24px;
-         cursor: pointer;">&times;</span>
-     <div class="popup-content" style="
-         display: flex;
-         flex-wrap: wrap;">
-         <div class="popup-image" style="
-             flex: 1;
-             max-width: 100%;">
-             <img src="assets/img/others/newsletter.png" alt="Custom Newsletter Image">
-         </div>
-         <div class="popup-details" style="
-             flex: 2;
-             padding: 0 20px;">
-             <center><h2>Subscribe to Our Newsletter</h2></center>
-             <input type="email" placeholder="Enter your email address" id="custom-email" required style="
-                 width: 100%;
-                 padding: 10px;
-                 margin-bottom: 10px;
-                 border: 1px solid #ccc;
-                 border-radius: 4px;">
-                 <center>
-             <button class="custom-button" onclick="subscribeCustom()" style="
-                 background-color: #4caf50;
-                 color: white;
-                 padding: 10px 20px;
-                 border: none;
-                 border-radius: 4px;
-                 cursor: pointer;">Subscribe</button>
-               </center>
-         </div>
-     </div>
- </div>
+      z-index: 9999;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      display: none;
+      background-image: url(assets/img/others/newsletter.jpg);
+      height:20%;">
+      <span class="custom-close-btn" onclick="closeCustomPopup()" style="position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 24px;
+          cursor: pointer;">&times;</span>
+      <div class="popup-content" style="display: flex;
+          flex-wrap: wrap;">
+          <div class="popup-details" style="flex: 2;
+              padding: 20px;padding: 35px;">
+              <center><h2>Subscribe to Our Newsletter</h2></center>
+              <input type="email" placeholder="Enter your email address" id="custom-email" required style="width: 100%;
+                  padding: 10px;
+                  margin-bottom: 10px;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;">
+              <center>
+                  <button class="custom-button" onclick="subscribeCustom()" style="background-color: #4caf50;
+                      color: white;
+                      padding: 10px 20px;
+                      border: none;
+                      border-radius: 4px;
+                      cursor: pointer;">Subscribe</button>
+              </center>
+          </div>
+      </div>
+  </div>
+  
+
  
   <script>
     function closeCustomPopup() {
