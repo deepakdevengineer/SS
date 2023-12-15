@@ -23,7 +23,6 @@ if (isset($_POST["submit"])) {
     $mail->addAddress($_POST["email"]); 
     // Replace with your email address
 
-
     $mail->Subject = $_POST["Name"];
     $mail->Body = $_POST["Comment"];
 
