@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
       /* Add any custom styles here */
       .brand-item 
@@ -63,10 +64,98 @@
       {
         right: 10px;
       }
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      min-height: 100vh;
+      margin: 0;
+      transition: background 0.2s linear;
+    }
+
+    body.dark {
+      background-color: #292c35;
+    }
+
+    body.dark h1,
+    body.dark .support a {
+      color: #fff;
+    }
+
+    .checkbox {
+      opacity: 0;
+      position: absolute;
+    }
+
+    .checkbox-label {
+      background-color: #111;
+      width: 50px;
+      height: 26px;
+      border-radius: 50px;
+      position: relative;
+      padding: 5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .fa-moon {
+      color: #f1c40f;
+    }
+
+    .fa-sun {
+      color: #f39c12;
+    }
+
+    .checkbox-label .ball {
+      background-color: #fff;
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      border-radius: 50%;
+      transition: transform 0.2s linear;
+    }
+
+    .checkbox:checked+.checkbox-label .ball {
+      transform: translateX(24px);
+    }
+
+    /*  Support me if you like it */
+    .support {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+
+    .support a {
+      color: #292c35;
+      font-size: 32px;
+      backface-visibility: hidden;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    .support a:hover {
+      transform: scale(1.1);
+    }
     </style>
   </head>
   <body>
     <!-- Pre-loader-start -->
+
     <div id="preloader">
       <div class="tg-cube-grid">
         <div class="tg-cube tg-cube1"></div>
@@ -101,76 +190,70 @@
               </div>
               <div class="menu-wrap">
                 <nav class="menu-nav">
-                  <div class="logo">
-                    <a href="index.html"
-                      ><img src="assets/img/logo/logo.png" alt="Logo"
-                    /></a>
+                  <div class="logo" style="order: -1;">
+                    <a href="index.html"><img src="assets/img/logo/logo.png" alt="Logo" /></a>
                   </div>
                   <div class="navbar-wrap main-menu d-none d-xl-flex">
                     <ul class="navigation">
                       <li class="active menu-item-has-children">
                         <a href="#home" class="section-link">Home</a>
-                       
                       </li> 
                       <li>
                         <a href="#features" class="section-link">Features</a>
                       </li>
                       <li>
-                        <a href="#ingredient" class="section-link"
-                          >Ingredient</a
-                        >
+                        <a href="#ingredient" class="section-link">Ingredient</a>
                       </li>
                       <li>
                         <a href="#paroller" class="section-link">Product</a>
                       </li>
-                      
                       <li class="menu-item-has-children">
                         <a href="#news" class="section-link">Our Blog</a>
-                      
                       </li>
                       <li>
                         <a href="#pricing" class="section-link">Pricing</a>
                       </li>
-                     
                       <li><a href="contact.html">contacts</a></li>
+                      <li> 
+                        <div>
+                          <input type="checkbox" class="checkbox" id="checkbox">
+                          <label for="checkbox" class="checkbox-label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <span class="ball"></span>
+                          </label>
+                        </div>
+                      </li>
                     </ul>
                   </div>
-                  <div class="header-action d-none d-sm-block">
+                  <div class="header-action d-none d-sm-block" style="order: 1;">
                     <ul>
-                      <li class="header-shop-cart">
+                      <li class="header-shop-cart" style="float: right;">
                         <a href="cart.html" class="cart-count">
                           <i class="flaticon-shopping-cart"> </i>
                           <span class="mini-cart-count">0</span>
                         </a>
-                       
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
               <div class="mobile-menu">
                 <nav class="menu-box">
                   <div class="close-btn"><i class="fas fa-times"></i></div>
                   <div class="nav-logo">
-                    <a href="index.html"
-                      ><img src="assets/img/logo/logo.png" alt=""
-                    /></a>
+                    <a href="index.html"><img src="assets/img/logo/logo.png" alt="" /></a>
                   </div>
                   <div class="menu-outer">
-                    <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                    <!-- Here Menu Will Come Automatically Via Javascript / Same Menu as in Header -->
                   </div>
                   <div class="social-links">
                     <ul class="clearfix">
-                      <li>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                      </li>
+                      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                      <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                      <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                     </ul>
                   </div>
                 </nav>
@@ -181,6 +264,8 @@
           </div>
         </div>
       </div>
+    </header>
+    
 
       <!-- header-search -->
       <div
@@ -1689,5 +1774,11 @@ Exceptional customer experiences while contributing positively to the global eco
     <script src="assets/js/newfe.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="cartt.js"></script>
+    <script>
+      const checkbox = document.getElementById("checkbox");
+      checkbox.addEventListener("change", () => {
+        document.body.classList.toggle("dark");
+      });
+    </script>
   </body>
 </html>

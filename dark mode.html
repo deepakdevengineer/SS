@@ -94,9 +94,43 @@
         right: -5%;
       }
     }
+
+    /* Dark Mode & Light Mode */
+    :root {
+      --dark-color: #111;
+      --light-color: #eee;
+    }
+
+    body.dark-mode {
+      background-color: var(--dark-color);
+      color: var(--light-color);
+    }
+
+    body.light-mode {
+      background-color: var(--light-color);
+      color: var(--dark-color);
+    }
+
+    body.dark-mode a {
+      color: var(--dark-color);
+    }
+
+    body.light-mode a {
+      color: var(--dark-color);
+    }
+
+    body.dark-mode button {
+      background-color: var(--light-color);
+      color: var(--dark-color);
+    }
+
+    body.light-mode button {
+      background-color: var(--dark-color);
+      color: var(--light-color);
+    }
   </style>
 </head>
-<body>
+<body class="light-mode">
   <div class="wrapper">
     <div class="container">
       <canvas id="wheel"></canvas>
@@ -138,8 +172,7 @@
         datasets: [
           {
             // Background color for each pie piece
-            backgroundColor: 
-            [
+            backgroundColor: [
               "#8b35bc",
               "#b163da",
               "#8b35bc",
@@ -201,6 +234,12 @@
         }
       }, 10);
     });
+
+    // Dark Mode & Light Mode Toggle
+    function toggleDarkLight() {
+      document.body.classList.toggle("dark-mode");
+      document.body.classList.toggle("light-mode");
+    }
   </script>
 </body>
 </html>
