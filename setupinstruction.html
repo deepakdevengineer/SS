@@ -99,6 +99,7 @@
 </style>
 </head>
 <body>
+
 <div id="particles-js"></div>
 
 <h1>Microgreen Setup Instructions</h1>
@@ -109,24 +110,87 @@
     <p>Step 1: Place the pad</p>
     <div class="arrow"></div>
   </div>
- 
   <div class="instruction">
     <img src="assets\img\products\cart_p01.jpg" alt="Step 2">
     <p>Step 2: Pour water</p>
     <div class="arrow"></div>
   </div>
-
   <div class="instruction">
     <img src="assets\img\products\cart_p01.jpg" alt="Step 3">
     <p>Step 3: Press button</p>
     <div class="arrow"></div>
   </div>
-
   <div class="instruction">
     <img src="assets\img\products\cart_p01.jpg" alt="Step 4">
     <p>Step 4: Enjoy</p>
   </div>
 </div>
+
+<!-- Additional CSS for arrows -->
+<style>
+  .instruction-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(25% + 70px);
+    height: 2px;
+    background-color: #999;
+    width: 150px;
+    z-index: -1;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .instruction-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 70px);
+    height: 2px;
+    background-color: #999;
+    width: 150px;
+    z-index: -1;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .instruction:nth-child(1) .arrow {
+    display: none;
+  }
+
+  .instruction:nth-child(2) .arrow {
+    width: calc(25% + 160px);
+  }
+
+  .instruction:nth-child(3) .arrow {
+    width: calc(50% + 160px);
+  }
+
+  .instruction:nth-child(4) .arrow {
+    width: calc(75% + 160px);
+  }
+
+  .instruction:nth-child(4) .arrow::before {
+    display: none;
+  }
+
+  .instruction .arrow::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border: 2px solid #999;
+    border-radius: 50%;
+    top: -5px;
+    left: -5px;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .instruction:hover .arrow::before {
+    background-color: #555;
+    transform: scale(1.1);
+  }
+</style>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
