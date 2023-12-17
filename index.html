@@ -151,6 +151,42 @@
     .support a:hover {
       transform: scale(1.1);
     }
+    
+
+/* Example CSS for styling */
+.formula-area {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+  /* Add more styles as needed */
+}
+
+.formula-content {
+  padding: 20px;
+}
+
+.section-title h2.title {
+  font-size: 36px;
+  color: #333;
+}
+
+.formula-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.formula-list li {
+  margin-bottom: 15px; /* Increase spacing between list items */
+  font-size: 18px; /* Increase font size */
+  color: #555; /* Adjust text color */
+}
+
+.bigger-list {
+  font-weight: bold; /* Make the list items bold */
+}
+#rotatingImg {
+  width: 1100px; /* Set the width */
+  height: 700px; /* Set the height */
+}
     </style>
   </head>
   <body>
@@ -858,30 +894,31 @@
     <div class="row align-items-center">
       <div class="col-lg-6 order-lg-2">
         <div class="formula-img">
-          <img src="assets/img/others/formula_img.png" alt="img" />
+          <img id="rotatingImg" src="assets\img\products\formula_img-removebg.png" alt="img" />
         </div>
       </div>
       <div class="col-lg-6">
         <div class="formula-content">
           <div class="section-title white-title mb-4">
-            <p class="sub-title">Accessible, High-Impact Nutrition</p>
             <h2 class="title">Why Choose AgriQulture?</h2>
           </div>
-          <ul class="formula-list list-wrap">
-            <li>We are changing the traditional culture of Agriculture XD.</li>
-            <li>Harvest Seconds Before Eating and Not Weeks.</li>
-            <li>Effortlessly Grow at The Comfort Of Your Home.</li>
-            <li>Soilless Technology Making Your Experience Messy-Free, Fungus-Free and Sustainable.</li>
-            <li>Gives You an Inspiration to Eat Healthy.</li>
-            <li>Microgreens make a sustainable choice, reducing food waste.</li>
-            <li>Elevate your culinary creations with the vibrant colors and textures of microgreens.</li>
+          <ul class="formula-list list-wrap bigger-list">
+            <li><strong>Changing Tradition:</strong> Revolutionizing Agriculture XD.</li>
+            <li><strong>Freshness:</strong> Harvest Seconds Before Eating.</li>
+            <li><strong>Convenience:</strong> Effortless Home Growing.</li>
+            <li><strong>Technology:</strong> Soilless, Mess-Free, Sustainable.</li>
+            <li><strong>Health:</strong> Inspiring Healthy Eating.</li>
+            <li><strong>Sustainability:</strong> Microgreens Reduce Food Waste.</li>
+            <li><strong>Culinary Enhancement:</strong> Vibrant Microgreens for Creativity.</li>
           </ul>
-          <a href="contact.html" class="btn btn-two mt-3">Know More</a>
+          <a href="contact.html" class="btn btn-two mt-3">Learn More</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
 
 <!-- We Need to insert the comparision -->
       <!-- features-product -->
@@ -1751,11 +1788,23 @@ Exceptional customer experiences while contributing positively to the global eco
     <script src="assets/js/newfe.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="cartt.js"></script>
+
     <script>
       const checkbox = document.getElementById("checkbox");
       checkbox.addEventListener("change", () => {
         document.body.classList.toggle("dark");
       });
+    </script>
+    <script>
+      // JavaScript to rotate the image continuously
+const rotatingImg = document.getElementById('rotatingImg');
+
+let rotation = 0;
+setInterval(() => {
+  rotation += 1;
+  rotatingImg.style.transform = `rotate(${rotation}deg)`;
+}, 50); // Adjust the speed of rotation by changing the interval (in milliseconds)
+
     </script>
   </body>
 </html>
