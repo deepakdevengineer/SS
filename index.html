@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/default.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/typewriter.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -186,6 +187,30 @@
 #rotatingImg {
   width: 1100px; /* Set the width */
   height: 700px; /* Set the height */
+}
+.typewriter h1 {
+  color: .15em solid orange;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
 }
     </style>
   </head>
@@ -383,7 +408,9 @@
             <div class="col-xxl-8 col-xl-7 col-lg-8 col-md-10">
               <div class="banner-content text-center">
                 <h2 class="title">ORGANIC SUPPLEMENTS-GROWN BY YOU, FOR YOU</h2>
-                <p class="banner-caption" style="font-size: 30px;">.. SuperGreens For SuperBharat ™ ..</p>
+                <div class="typewriter">
+                <h1><p class="banner-caption" style="font-size: 30px;">.. SuperGreens For SuperBharat ™ ..</p></h1>
+                </div>
                 <a href="shop.html" class="btn btn-two">Harvest Now</a>
               </div>
             </div>
