@@ -212,6 +212,72 @@
   from, to { border-color: transparent }
   50% { border-color: orange }
 }
+/* Apply styles for the preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; /* Change this to your desired background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it's on top of other content */
+}
+
+/* Styles for the cube grid animation */
+.tg-cube-grid {
+  width: 80px;
+  height: 80px;
+}
+
+.tg-cube-grid div {
+  width: 33%;
+  height: 33%;
+  background-color: #333; /* Adjust the color as needed */
+  float: left;
+  animation: cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+
+.tg-cube-grid div:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.tg-cube-grid div:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.tg-cube-grid div:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.tg-cube-grid div:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.tg-cube-grid div:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.tg-cube-grid div:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.tg-cube-grid div:nth-child(7) {
+  animation-delay: 1s;
+}
+.tg-cube-grid div:nth-child(8) {
+  animation-delay: 0.2s;
+}
+.tg-cube-grid div:nth-child(9) {
+  animation-delay: 0.4s;
+}
+
+/* Animation keyframes */
+@keyframes cubeGridScaleDelay {
+  0%, 70%, 100% {
+    transform: scale3D(1, 1, 1);
+  }
+  35% {
+    transform: scale3D(0, 0, 1);
+  }
+}
+
     </style>
   </head>
   <body>
@@ -219,18 +285,17 @@
 
     <div id="preloader">
       <div class="tg-cube-grid">
-        <div><img src="assets/img/logo/logo.png" alt="Logo" sizes="5px"/></div>
-        <div class="tg-cube tg-cube1"></div>
-        <div class="tg-cube tg-cube2"></div>
-        <div class="tg-cube tg-cube3"></div>
-        <div class="tg-cube tg-cube4"></div>
-        <div class="tg-cube tg-cube5"></div>
-        <div class="tg-cube tg-cube6"></div>
-        <div class="tg-cube tg-cube7"></div>
-        <div class="tg-cube tg-cube8"></div>
-        <div class="tg-cube tg-cube9"></div>
+       <!--<div><img src="assets/img/logo/logo.png" alt="Logo" sizes="5px"/></div>--> 
+        <div> <img src="assets\img\logo\00.png" alt="no img" sizes="5px"/></div>
+        <div> <img src="assets\img\logo\10.png" alt="no img" sizes="5px"/></div>
+        <div> <img src="assets\img\logo\20.png" alt="no img" sizes="1px"/></div>
+        <div> <img src="assets\img\logo\01.png" alt="no img" sizes="5px"/></div>
+        <div> <img src="assets\img\logo\11.png" alt="no img" sizes="5px"/></div>
+        <div> <img src="assets\img\logo\21.png" alt="no img" sizes="1px"/></div>
+        <div> <img src="assets\img\logo\02.png" alt="no img" sizes="5px"/></div>
+        <div> <img src="assets\img\logo\12.png" alt="no img" sizes="5px"/></div>
+        <div> <img src="assets\img\logo\22.png" alt="no img" sizes="1px"/></div>
       </div>
-      
     </div>
     <!-- Pre-loader-end -->
     <!-- Scroll-top -->
